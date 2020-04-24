@@ -1,0 +1,29 @@
+//requiring express for http servers
+//const express = require('express');
+
+//express is a function
+const app = express()
+
+//we are using methods of express function
+//get() is used to respond on the http request
+app.get('', (req, res) => {
+    res.send('Hello express!');
+})
+
+//const path = require('path');
+//path is node core moule that is used to customize
+//the path directory
+
+//const publicDirectoryPath = path.join(__dirname, '../public');
+//__dirname is a freature of node that provides the
+//directory to the file and we use path.join() to go
+//to our desired directory
+
+//app.use(express.static(publicDirectoryPath));
+//linking the directory for web request.
+
+//hbs is a node module that connect express to 
+//Handlebars which is used for dynamic web page
+//and templating.
+
+//"important" https has one time request and onetime respond
