@@ -1,4 +1,3 @@
-console.log("client side js!");
 
 const weatherFrom = document.querySelector('form');
 const message = document.querySelector('#message');
