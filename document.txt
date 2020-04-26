@@ -27,3 +27,10 @@ app.get('', (req, res) => {
 //and templating.
 
 //"important" https has one time request and onetime respond
+
+//here we are fetching data from the url provided and convert that into json
+fetch(url).then((response) => {
+    response.json().then((data) => {
+        //some code
+    })
+})

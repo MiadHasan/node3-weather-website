@@ -1,4 +1,3 @@
-
 const weatherFrom = document.querySelector('form');
 const message = document.querySelector('#message');
 
@@ -7,7 +6,7 @@ weatherFrom.addEventListener('submit', (e) => {
     e.preventDefault();
     
     const location = document.querySelector('#location').value;
-    const url = 'http://localhost:3000/weather?address=' + encodeURIComponent(location);
+    const url = '/weather?address=' + encodeURIComponent(location);
     
     message.textContent = 'Loading...';
 
