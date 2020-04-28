@@ -37,7 +37,7 @@ header a {
     text-decoration: none;
 }
 
-input {
+#location {
     border: 1px solid #cccccc;
     padding: 8px;
 }
@@ -48,4 +48,9 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+}
+
+#message {
+    font-size: 30px;
+    text-shadow: 2px 2px 2px lightslategray;
 }

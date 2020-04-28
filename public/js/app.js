@@ -17,6 +17,7 @@ weatherFrom.addEventListener('submit', (e) => {
             } else {
                 message.innerHTML = 'Location: '+data.location+
                 '<br>'+'Temparature: '+data.temparature+'<br>'+
+                'Weather Forecast: '+data.weatherForecast+'<br>'+
                 'Sunrise: '+data.sunRise+'<br>'+'Sunset: '+data.sunSet;
             }
         })

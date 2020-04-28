@@ -10,13 +10,16 @@ const forecast = (lat, lon, callback) => {
         } else if (!body.current) {
             callback('Unable to find the location!', undefined);
         } else { 
-            const temparature = body.current.temp - 273.15;
-            const sunRise = (new Date(body.current.sunrise * 1000)).toLocaleTimeString();
-            const sunSet = (new Date(body.current.sunset * 1000)).toLocaleTimeString();
+            const temparature = (body.current.temp - 273.15).toFixed(2);
+            const sunRise = (new Date(body.current.sunrise * 1000)).toLocaleTimeString("en-US", {timeZone: body.timezone});
+            const sunSet = (new Date(body.current.sunset * 1000)).toLocaleTimeString("en-US", {timeZone: body.timezone});
+            const weatherForecast = body.daily[0].weather[0].description;
+
             const data = {
                 temparature,
                 sunRise,
-                sunSet
+                sunSet,
+                weatherForecast
             }
             callback(undefined, data);
         }

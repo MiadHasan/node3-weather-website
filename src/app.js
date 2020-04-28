@@ -36,7 +36,7 @@ app.get('/weather', (req, res) => {
             });
         }
     
-        forecast(latitude, longitude, (error, { temparature, sunRise, sunSet } = {}) => {
+        forecast(latitude, longitude, (error, { temparature, sunRise, sunSet, weatherForecast } = {}) => {
             if (error) {
                 return res.send({
                     error
@@ -46,7 +46,8 @@ app.get('/weather', (req, res) => {
                 location,
                 temparature,
                 sunRise,
-                sunSet
+                sunSet,
+                weatherForecast
             });
         })
     })
